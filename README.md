@@ -64,4 +64,20 @@ The default keymapping on Windows...
 ]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+## Pandoc Path Settings on Windwos ##
+
+The plugin will look for Pandoc path using sublime settings `pandoc_path` or `pandoc_bin`.  
+The default settings should work under OS X without a problem. On windows, to set up the path correctly, change the `Pandoc.sublime-settings` to this:  
+
+~~~~~ {#mycode .python .numberLines startFrom="100"}
+{
+    // undefine the default path
+    //"pandoc_path": "~/Library/Haskell/bin"
+    
+    // provide the full path for pandoc.exe here
+    "pandoc_bin": "c:\Users\example\AppData\Local\Pandoc\pandoc.exe"
+}
+~~~~
+
+
 [Pandoc]: http://johnmacfarlane.net/pandoc/
