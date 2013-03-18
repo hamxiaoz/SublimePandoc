@@ -75,7 +75,7 @@ The default settings should work under OS X without a problem. On windows, to se
     //"pandoc_path": "~/Library/Haskell/bin"
     
     // provide the full path for pandoc.exe here
-    "pandoc_bin": "c:\Users\example\AppData\Local\Pandoc\pandoc.exe"
+    "pandoc_bin": "c:\\Users\\example\\AppData\\Local\\Pandoc\\pandoc.exe"
 }
 ~~~~
 
