@@ -23,7 +23,7 @@ class PandocRenderCommand(sublime_plugin.TextCommand):
         return self.view.score_selector(0, "text.html.markdown") > 0
 
     def is_visible(self):
-        return True 
+        return True
 
     def run(self, edit, target="html", openAfter=True, writeBeside=False, additionalArguments=[]):
         if not target in ["html","docx"]: raise Exception("target must be either 'html' or 'docx'")
@@ -71,6 +71,7 @@ class PandocRenderCommand(sublime_plugin.TextCommand):
 
         # build output
         cmd = [pandoc_bin]
+        cmd.append('--from=markdown_github') # use github style markdown for newline
         cmd.append('-t')
         cmd.append({'html':'html5', 'docx':'docx'}[target])
         cmd.append('--standalone')
